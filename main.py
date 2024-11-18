@@ -47,4 +47,18 @@ def generate_article(article_text):
 
 # część kodu odpowiedzialna za włączenie funkcji i odebranie contentu odpowiedzi
 html_article = generate_article(article_text)
-print(html_article)
+
+# kod odpowiedzialny za tworzenie pliku artykul.html w konkretnym folderze.
+
+folder_path = "./ArticlesReady/"
+# sprawdzanie czy folder istnieje
+os.makedirs(folder_path, exist_ok=True)
+
+# tworzenie pliku artykul.html
+file_path = os.path.join(folder_path, "artykul.html")
+
+#zapisanie contentu odpowiedzi OpenAi w pliku artykul.html
+with open(file_path, "w", encoding="utf-8") as file:
+    file.write(html_article)
+
+print(f"Artykuł zapisany w {file_path}")
