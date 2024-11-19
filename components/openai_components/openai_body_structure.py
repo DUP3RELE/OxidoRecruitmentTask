@@ -5,7 +5,8 @@ def generate_article(api_key, article_text):
     
     response = client.chat.completions.create(
         # "gpt-3.5-turbo" = słabsza wersja, mniejsze koszty.
-        model="gpt-4o",
+        # "gpt-4o" = mocniejsza wersja, większe koszty.
+        model="gpt-3.5-turbo",
         messages=[
             {"role": "system", "content": "Jesteś asystentem, który tworzy fragmenty stron internetowych. Jako "
                                           "odpowiedź wysyłaj tylko i wyłącznie kod, który napisałeś. Zamknij odpowiedź w tagu <body></body>, tak aby mogła być od razu użyta (bez żadnych dodatkowych znaków)"},
