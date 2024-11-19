@@ -10,7 +10,7 @@ def generate_article(api_key, article_text):
         messages=[
             {"role": "system", "content": "Jesteś asystentem, który tworzy fragmenty stron internetowych. Jako "
                                           "odpowiedź wysyłaj tylko i wyłącznie kod, który napisałeś. Zamknij "
-                                          "odpowiedź w tagu <body></body>, bez żadnych dodatkowych oznaczeń bloku kodu."},
+                                          "odpowiedź w tagu <body></body>. Podaj odpowiedź bez oznaczeń bloku kodu."},
             {"role": "user",
              "content": f"Stwórz fragment strony HTML, zawarty w tagu <body></body>. Ma to być artykuł, którego treść "
                         f"podana jest tutaj: {article_text}. Wskaż miejsca gdzie warto wstawić grafiki, oznacz je za "

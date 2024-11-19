@@ -11,7 +11,7 @@ def generate_html_structure(api_key):
         messages=[
             {"role": "system", "content": "Jesteś asystentem, który tworzy fragmenty stron internetowych. Jako "
                                           "odpowiedź wysyłaj tylko i wyłącznie kod, który napisałeś. Zamknij "
-                                          "odpowiedź w tagu <HTML></HTML>. Podaj odpowiedź bez żadnych oznaczeń bloku kodu."},
+                                          "odpowiedź w tagu <HTML></HTML>. Podaj odpowiedź bez oznaczeń bloku kodu."},
             {"role": "user",
              "content": "Stwórz responsywny szablon strony www napisany w HTML, używany do wyświetlania gotowych "
                         "artykułów. Artykuły mają być wyświetlane na 90% szerokości ekranu. Dodaj proste style CSS i "
@@ -20,8 +20,8 @@ def generate_html_structure(api_key):
                         "Stosuj style bezpośrednio do elementów HTML, bez użycia klas. artykuł jest zamknięty w tagu "
                         "<body>, który zawiera tagi <article> (tag w którym znajduje się cały artykuł), <h1>, "
                         "<section>, <h2>, <p>, <img>, <figcaption>, <footer>. Dla JS dodaj funkcję która pilnuje "
-                        "trybu jasnego lub ciemnego,zależnie od tego jaki tryb ma ustawiony użytkownik, dostosuj "
-                        "style CSS. dodaj do <script> atrybut defer, umieść <script> w tagu <head>. Podaj odpowiedź"
+                        "trybu jasnego lub ciemnego - zależnie od tego jaki tryb ma ustawiony użytkownik, dostosuj "
+                        "style CSS. dodaj do <script> atrybut defer, umieść <script> w tagu <head>. Podaj odpowiedź bez oznaczeń bloku kodu"
                         }
         ]
     )
