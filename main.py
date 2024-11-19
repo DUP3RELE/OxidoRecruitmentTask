@@ -1,6 +1,6 @@
 from api.get_key import load_api_key
 from components.article_loader import load_article
-from components.openai_client import generate_article
+from components.openai_components.openai_body_structure import generate_article
 from components.file_saver import save_to_file
 
 def main():

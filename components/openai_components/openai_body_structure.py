@@ -18,4 +18,5 @@ def generate_article(api_key, article_text):
         ]
     )
     
-    return response.choices[0].message.content
+    response_text = response.choices[0].message.content
+    return response_text
