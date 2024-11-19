@@ -19,6 +19,10 @@ później sklonuj repozytorium za pomocą
 ``` github
 git clone https://github.com/DUP3RELE/OxidoRecruitmentTask.git
 ```
+przejdź do folderu aplikacji
+``` bash
+cd OxidoRecruitmentTask
+```
 ### 2. Stwórz lub wklej plik config.json
 Aplikacja nie będzie działać bez klucza API. Możesz dodać swój klucz do pliku `config.json` lub zmodyfikować kod, aby przyjmował klucz API jako zmienną środowiskową.
 ### 3. Włącz program `main.py`
