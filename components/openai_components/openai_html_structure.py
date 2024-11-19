@@ -6,12 +6,21 @@ def generate_html_structure(api_key):
     response = client.chat.completions.create(
         # "gpt-3.5-turbo" = słabsza wersja, mniejsze koszty.
         # "gpt-4o" = mocniejsza wersja, większe koszty.
-        model="gpt-3.5-turbo",
+        model="gpt-4o",
         messages=[
             {"role": "system", "content": "Jesteś asystentem, który tworzy fragmenty stron internetowych. Jako "
-                                          "odpowiedź wysyłaj tylko i wyłącznie kod, który napisałeś. Zamknij odpowiedź w tagu <HTML></HTML>, tak aby mogła być od razu użyta (bez żadnych dodatkowych znaków)"},
+                                          "odpowiedź wysyłaj tylko i wyłącznie kod, który napisałeś. Zamknij "
+                                          "odpowiedź w tagu <HTML></HTML>, bez żadnych dodatkowych oznaczeń bloku kodu."},
             {"role": "user",
-             "content": f"Stwórz szablon dla strony www, napisany w HTML, zadbaj o to aby był responsywny. Ma on być używany do oglądania gotowych artykułów. Dodaj proste style CSS i kod JS, które pozwolą na wizualizację kodu po wklejeniu jego kodu do sekcji <body>. Sekcja <body> powinna być pusta i gotowa na wklejenie artykułu. style przypisz do tagów, artykuł zawiera tagi <article>, <h1>, <section>, <h2>, <p>, <img>, <figcaption>, <footer>. Dla JS dodaj funkcję która pilnuje trybu jasnego lub ciemnego, zależnie od tego jaki tryb ma ustawiony użytkownik, dostosuj style CSS. dodaj do <script> atrybut defer, umieść <script> w tagu <head>."}
+             "content": "Stwórz responsywny szablon strony www napisany w HTML, używany do wyświetlania gotowych "
+                        "artykułów. Artykuły mają być wyświetlane na 90% szerokości ekranu. Dodaj proste style CSS i "
+                        "kod JS, który umożliwi dynamiczną zmianę między trybem jasnym i ciemnym, w zależności od "
+                        "preferencji użytkownika. Sekcja <body> powinna być pusta i gotowa na wklejenie artykułu."
+                        "Stosuj style bezpośrednio do elementów HTML, bez użycia klas. artykuł jest zamknięty w tagu "
+                        "<body>, który zawiera tagi <article> (tag w którym znajduje się cały artykuł), <h1>, "
+                        "<section>, <h2>, <p>, <img>, <figcaption>, <footer>. Dla JS dodaj funkcję która pilnuje "
+                        "trybu jasnego lub ciemnego,zależnie od tego jaki tryb ma ustawiony użytkownik, dostosuj "
+                        "style CSS. dodaj do <script> atrybut defer, umieść <script> w tagu <head>."}
         ]
     )
     
