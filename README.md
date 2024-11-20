@@ -48,3 +48,4 @@ Podgląd gotowego kodu możesz zobaczyć za pomocą edytora kodu (np. Visual Stu
 
 ## Dodatkowe informacje
 - Do generacji kodu użyty został model gpt-4. Idealnym modelem byłby davinci-002, jednak zgodnie z dokumentacją OpenAI, jego rozwój został zakończony.
+- Kolejnym dobrym rozwiązaniem byłoby stworzenie asystenta OpenAI, jednak postanowiłem jeszcze nie korzystać z tej funkcji, ponieważ jest w fazie beta.
