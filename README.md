@@ -28,7 +28,7 @@ upewnij się że masz zainstalowaną bibliotekę openai
 pip install openai
 ```
 ### 2. Stwórz lub wklej plik config.json
-Aplikacja nie będzie działać bez klucza API. Możesz dodać swój klucz do pliku `config.json` lub zmodyfikować kod, aby przyjmował klucz API jako zmienną środowiskową.
+Aplikacja nie będzie działać bez klucza API. Możesz stworzyć plik `config.json` i dodać swój klucz, lub zmodyfikować kod, aby przyjmował klucz API jako zmienną środowiskową.
 ### 3. Włącz program `main.py`
 **Upewnij się, że masz zainstalowanego Pythona na swoim systemie.** <br>
 *Aby uzyskać pełniejszy efekt, usuń wszystkie pliki z folderu `generated_files` przed uruchomieniem programu.* <br>
@@ -37,6 +37,7 @@ Następnie, w głównym folderze aplikacji, uruchom program za pomocą poniższe
 ``` bash
 python main.py
 ```
+Poczekaj chwilę, generowanie plików może trochę potrwać.
 Gotowy kod HTML wygenerowany za pomocą OpenAI API będzie zapisany w folderze *`generated_files`*
 ### 4. Sprawdzanie gotowego kodu
 Podgląd gotowego kodu możesz zobaczyć za pomocą edytora kodu (np. Visual Studio Code) z rozszerzeniem Live Server lub otwierając plik `podglad.html` w domyślnej przeglądarce.
@@ -48,4 +49,4 @@ Podgląd gotowego kodu możesz zobaczyć za pomocą edytora kodu (np. Visual Stu
 
 ## Dodatkowe informacje
 - Do generacji kodu użyty został model gpt-4. Idealnym modelem byłby davinci-002, jednak zgodnie z dokumentacją OpenAI, jego rozwój został zakończony.
-- Kolejnym dobrym rozwiązaniem byłoby stworzenie asystenta OpenAI, jednak postanowiłem jeszcze nie korzystać z tej funkcji, ponieważ jest w fazie beta.
+- Kolejnym dobrym rozwiązaniem byłoby stworzenie asystenta OpenAI, jednak postanowiłem jeszcze nie korzystać z tej funkcji, ponieważ jest w fazie beta. W systemie OpenAI można zarejestrować asystenta i przypisać mu, za pomocą instrukcji (instructions), dowolną rolę (np. kreatora kodu, dodając szczegółowe informacje na temat jego zadania). Za pomocą narzędzi (tools), takich jak `{"type": "code_interpreter"}`, można również dodać niezbędne funkcje. Dzięki tak stworzonemu asystentowi moglibyśmy wysyłać jeszcze krótsze prompty i otrzymywać bardziej precyzyjne odpowiedzi.  [Link do dokumentacji asystenta openai (beta)](https://platform.openai.com/docs/api-reference/assistants)
