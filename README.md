@@ -45,3 +45,6 @@ Podgląd gotowego kodu możesz zobaczyć za pomocą edytora kodu (np. Visual Stu
 - Github = kontrola wersji, udostępnianie kodu
 - PyCharm Community Edition = edycja kodu w Pythonie
 - OpenAI API = dostarczanie promptów i odbieranie gotowych komponentów
+
+## Dodatkowe informacje
+- Do generacji kodu użyty został model gpt-4. Idealnym modelem byłby davinci-002, jednak zgodnie z dokumentacją OpenAI, jego rozwój został zakończony.
