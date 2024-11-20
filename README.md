@@ -11,7 +11,7 @@ Alternatywnie, możesz zmodyfikować kod, aby przyjmował klucz API jako zmienn�
 Projekt to aplikacja do generowania artykułów i szablonów z wykorzystaniem API OpenAI oraz Pythona. Aplikacja automatyzuje proces tworzenia artykułu i szablonu na podstawie wysyłanych promptów, a następnie za pomocą Pythona łączy wygenerowane kody HTML w gotowy podgląd strony.
 ## Instrukcja obsługi
 ### 1. Pobierz repozytorium git na lokalny system:
-Sklonuj repozytorium na swój komputer, używając poniższej komendy w konsoli (np. za pomocą edytora kodu VSCode, w terminalu - Powershell, Bash, itp.):
+Sklonuj repozytorium na swój komputer, używając poniższej komendy w konsoli (np. za pomocą edytora kodu VSCode lub PyCharm, w terminalu - Powershell, Bash, itp.):
 ``` github
 git init
 ```
@@ -22,6 +22,10 @@ git clone https://github.com/DUP3RELE/OxidoRecruitmentTask.git
 przejdź do folderu aplikacji
 ``` bash
 cd OxidoRecruitmentTask
+```
+upewnij się że masz zainstalowaną bibliotekę openai
+``` bash
+pip install openai
 ```
 ### 2. Stwórz lub wklej plik config.json
 Aplikacja nie będzie działać bez klucza API. Możesz dodać swój klucz do pliku `config.json` lub zmodyfikować kod, aby przyjmował klucz API jako zmienną środowiskową.
