@@ -17,8 +17,9 @@ def generate_article(api_key, article_text):
                  "content": f"Stwórz fragment strony HTML, zawarty w tagu <body></body>. Ma to być artykuł, którego treść "
                             f"podana jest tutaj: {article_text}. Wskaż miejsca gdzie warto wstawić grafiki, oznacz je za "
                             f"pomocą tagu <img>, z atrybutem src image_placeholder.jpg. Dodaj atrybut "
-                            f"alt zawierający dokładny opis obrazu (prompt do wygenerowania grafiki). Umieść podpisy pod "
-                            f"grafikami używając odpowiedniego tagu HTML."}
+                            f"alt zawierający dokładny opis obrazu, opisany w kilku zdaniach, tak aby za jego pomocą "
+                            f"wygenerowano wysokiej jakości grafikę (prompt do wygenerowania grafiki). Umieść podpisy "
+                            f"pod grafikami używając odpowiedniego tagu HTML."}
             ]
         )
 
