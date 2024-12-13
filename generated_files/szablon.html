@@ -1,92 +1,98 @@
 <HTML>
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artykuł</title>
     <style>
         body {
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
+            max-width: 900px;
+            margin: 0 auto;
+            transition: background-color 0.3s, color 0.3s;
         }
 
         article {
             width: 90%;
-            max-width: 800px;
+            margin: 20px auto;
             padding: 20px;
             box-sizing: border-box;
+            border-radius: 5px;
+            transition: background-color 0.3s;
         }
 
-        @media (prefers-color-scheme: dark) {
-            body {
-                background-color: #121212;
-                color: #ffffff;
-            }
-
-            img {
-                box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-            }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
         }
 
-        @media (prefers-color-scheme: light) {
-            body {
-                background-color: #ffffff;
-                color: #000000;
-            }
-
-            img {
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            }
-        }
-
-        h1, h2 {
-            margin: 20px 0;
+        h2 {
+            font-size: 1.5em;
+            margin-top: 20px;
+            margin-bottom: 10px;
         }
 
         p {
+            font-size: 1em;
             line-height: 1.6;
-            margin: 10px 0;
+            margin-bottom: 20px;
         }
 
         img {
             max-width: 100%;
             height: auto;
-            display: block;
             margin: 20px 0;
         }
 
         figcaption {
-            font-size: 14px;
-            color: #666;
+            font-size: 0.9em;
+            color: gray;
             text-align: center;
+            margin-top: -10px;
+            margin-bottom: 20px;
         }
 
         footer {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid currentColor;
             text-align: center;
-            font-size: 14px;
+            font-size: 0.8em;
+            color: gray;
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+            margin-top: 20px;
+        }
+
+        body.light-mode {
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        article.light-mode {
+            background-color: #f0f0f0;
+        }
+
+        body.dark-mode {
+            background-color: #181818;
+            color: #ffffff;
+        }
+
+        article.dark-mode {
+            background-color: #282828;
         }
     </style>
     <script defer>
-        function applyTheme() {
-            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                document.body.style.backgroundColor = '#121212';
-                document.body.style.color = '#ffffff';
+        function setTheme() {
+            const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (prefersDarkMode) {
+                document.body.classList.add('dark-mode');
+                document.querySelector('article').classList.add('dark-mode');
             } else {
-                document.body.style.backgroundColor = '#ffffff';
-                document.body.style.color = '#000000';
+                document.body.classList.add('light-mode');
+                document.querySelector('article').classList.add('light-mode');
             }
         }
-
-        window.onload = applyTheme;
-        window.matchMedia('(prefers-color-scheme: dark)').addListener(applyTheme);
+        window.onload = setTheme;
     </script>
 </head>
 <body>
-    <!-- Artykuł zostanie tutaj wklejony -->
+
 </body>
 </HTML>
